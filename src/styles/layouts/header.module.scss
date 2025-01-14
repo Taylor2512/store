@@ -1,0 +1,15 @@
+.header {
+    @apply flex justify-between items-center p-4 bg-gray-800 text-white;
+
+    &__logo {
+        @apply text-2xl font-bold;
+    }
+
+    &__nav {
+        @apply flex gap-4;
+    }
+
+    &__link {
+        @apply text-white hover:text-gray-400;
+    }
+}

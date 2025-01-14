@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import './styles/globals.scss'; // Importa los estilos globales
+import './styles/index.module.scss'; // Importa los estilos específicos del módulo
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

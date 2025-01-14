@@ -1,0 +1,7 @@
+.navbar {
+    @apply bg-blue-500 p-4;
+
+    &__link {
+        @apply text-white mr-4;
+    }
+}

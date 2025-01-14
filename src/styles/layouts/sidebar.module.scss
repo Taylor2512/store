@@ -1,0 +1,11 @@
+.sidebar {
+    @apply bg-gray-800 text-white p-4;
+
+    &__list {
+        @apply list-none p-0;
+    }
+
+    &__item {
+        @apply mb-2;
+    }
+}
