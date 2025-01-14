@@ -3,6 +3,6 @@
 
     &__input {
         /* Usa la clase directamente sin @extend */
-        @apply input;
+        @apply input bg-gray-200 border border-gray-300 rounded-md pr-44 w-full;
     }
 }

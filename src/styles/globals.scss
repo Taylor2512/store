@@ -1,22 +1,52 @@
-@tailwind  base;
-@tailwind  components;
-@tailwind  utilities;
-@tailwind  screens;
-@tailwind  variants;
+// ✅ Primero, importa todas las dependencias de SCSS con @use
+@use "base/_variables.scss";
+@use "base/_mixins.scss";
+@use "base/_reset.scss";
+@use "base/_typography.scss";
+@use "base/_themes.scss";
+@use "base/_helpers.scss";
 
-// Importa las bases de SCSS
-@use "base/variables";
-@use "base/mixins";
-@use "base/reset";
-@use "base/typography";
-@use "base/themes";
+// Luego, importa las utilidades
+@use "utilities/_animations.scss";
+@use "utilities/_flex.scss";
+@use "utilities/_grid.scss";
+@use "utilities/_spacing.scss";
+@use "utilities/_z-index.scss";
 
-// Importa las utilidades personalizadas
-@use "utilities/animations";
-@use "utilities/flex";
-@use "utilities/grid";
-@use "utilities/spacing";
-@use "utilities/z-index";
+// Importa estilos de cmdk
+@use "cmdk/framer.scss";
+@use "cmdk/linear.scss";
+@use "cmdk/raycast.scss";
+@use "cmdk/vercel.scss";
+
+// ✅ Ahora sí, importa Tailwind después de los @use
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Importa las clases personalizadas (si no dependen de SCSS)
+@import "custom-classes.css";
+
+// Definiciones globales
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC;
+}
+
+::selection {
+  @apply bg-pink-500 text-white;
+}
+
+html, body {
+  @apply h-full p-0 m-0 font-sans;
+}
+
+body {
+  @apply flex flex-col bg-gray-100 overflow-x-hidden;
+}
 
 @font-face {
   font-family: 'Inter';

@@ -2,7 +2,8 @@ import styles from "@styles/pages/home.module.scss";
 
 export default function Home() {
     return (
-        <div className={styles.home}>
+        <div
+            className={styles.home}>
             {/* Hero Section */}
             <section className={styles.hero}>
                 <h1>Bienvenido a AgroMarket</h1>
