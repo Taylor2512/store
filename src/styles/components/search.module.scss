@@ -1,0 +1,8 @@
+.search {
+    @apply flex items-center;
+
+    &__input {
+        /* Usa la clase directamente sin @extend */
+        @apply input;
+    }
+}
