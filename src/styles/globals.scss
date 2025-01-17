@@ -20,11 +20,12 @@
 @use "cmdk/vercel.scss";
 
 // ✅ Ahora sí, importa Tailwind después de los @use
-@import "custom-classes.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
 
+@import "tailwindcss/components";
+@import "custom-classes.css";
+
+@import "tailwindcss/utilities";
 // Definiciones globales
 @font-face {
   font-family: 'Inter';
@@ -52,23 +53,6 @@ body {
   font-weight: 100 900;
   font-display: optional;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC;
-}
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded font-medium transition-all;
-  }
-
-  .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
-  }
-
-  .btn-secondary {
-    @apply bg-gray-600 text-white hover:bg-gray-700;
-  }
-
-  .input {
-    @apply bg-gray-200 border border-gray-300 rounded-md p-2 w-full;
-  }
 }
 
 ::selection {

@@ -1,8 +1,15 @@
 import { create } from "zustand";
 
+interface User {
+    id: string;
+    name: string;
+    email: string;
+    // Add other user properties as needed
+}
+
 interface AuthState {
-    user: any;
-    login: (user: any) => void;
+    user: User | null;
+    login: (user: User) => void;
     logout: () => void;
 }
 
