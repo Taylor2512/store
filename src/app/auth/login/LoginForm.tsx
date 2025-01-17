@@ -1,51 +1,21 @@
-import React, { useState } from 'react';
-import styles from './Login.module.scss';
+"use client";
 
-interface LoginProps {
-  onLogin: (username: string, password: string) => void;
-}
+import { useState } from "react";
 
-const Login: React.FC<LoginProps> = ({ onLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+export default function LoginForm() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    onLogin(username, password);
-  };
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log("Login con:", { email, password });
+    };
 
-  return (
-    <div className={styles['layout-container']}>
-        <form onSubmit={handleSubmit} className={styles['layout-form']}>
-            <div className={styles['layout-form__group']}>
-                <label htmlFor="username" className={styles['layout-form__group__label']}>Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    className={styles['layout-form__group__input']}
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-            </div>
-            <div className={styles['layout-form__group']}>
-                <label htmlFor="password" className={styles['layout-form__group__label']}>Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    className={styles['layout-form__group__input']}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-            </div>
-            <div className={styles['layout-form__button-container']}>
-                <button type="submit" className={styles['layout-form__button-container__button']}>Login</button>
-            </div>
-            <div className={styles['layout-form__button-container']}>
-                <button type="submit" className={styles['layout-form__button-container__button']}>Registrarse</button>
-            </div>
+    return (
+        <form onSubmit={handleSubmit}>
+            <input type="email" placeholder="Correo" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <button type="submit">Ingresar</button>
         </form>
-    </div>
-  );
-};
-
-export default Login;
+    );
+}
