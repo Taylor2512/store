@@ -62,7 +62,6 @@
     margin-right: 8px;
     font-weight: 500;
     transition: all 150ms ease;
-    transition-property: none;
 
     &[data-selected='true'] {
       background: var(--blue9);

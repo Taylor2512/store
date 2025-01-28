@@ -5,6 +5,10 @@
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 rounded-md transition-all;
+    &:focus-visible {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+    }
   }
 
   .btn-primary {
@@ -16,7 +20,7 @@
   }
 
   .card {
-    @apply bg-white shadow-md rounded-lg p-6;
+    @apply bg-gradient-to-b from-white to-gray-100 shadow-md rounded-lg p-6;
   }
 
   .card-header {

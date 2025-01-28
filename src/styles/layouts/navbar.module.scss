@@ -2,6 +2,6 @@
     @apply bg-blue-500 p-4;
 
     &__link {
-        @apply text-white mr-4;
+        @apply text-white mr-4 hover:text-gray-200;
     }
 }

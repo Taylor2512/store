@@ -25,6 +25,7 @@
 @use "tailwindcss/utilities";
 
 @import "custom-classes.css";
+@import "index.module.scss"; // Asegúrate de que este archivo exista en la ruta especificada
 
 // Definiciones globales
 @font-face {
@@ -44,43 +45,20 @@ html, body {
 }
 
 body {
-  @apply flex flex-col bg-gray-100 overflow-x-hidden;
+  @apply flex flex-col bg-gradient-to-b from-gray-100 to-white overflow-x-hidden;
+  min-height: 100vh;
 }
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC;
-}
-
-::selection {
-  background: hotpink;
-  color: white;
-}
-
-html, body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-sans);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  background: var(--app-bg);
-  overflow-x: hidden;
-}
 .layout {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .content {
   flex: 1;
+  padding-bottom: 100px; // Espacio para el footer
 }
 
 button {
@@ -88,6 +66,10 @@ button {
   font-family: var(--font-sans);
   padding: 0;
   border: 0;
+  &:focus-visible {
+    outline: 2px solid var(--blue7);
+    outline-offset: 2px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p {

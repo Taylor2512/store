@@ -12,10 +12,10 @@ export default function Header() {
             </div>
             <Search />
             <nav className="flex space-x-4">
-                <Link href="/products" className="text-gray-700 hover:text-gray-900">Productos</Link>
-                <Link href="/about" className="text-gray-700 hover:text-gray-900">Sobre Nosotros</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contacto</Link>
-                <Link href="/cart" className="text-gray-700 hover:text-gray-900">Carrito</Link>
+                <Link href="/products" className="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900">Productos</Link>
+                <Link href="/about" className="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900">Sobre Nosotros</Link>
+                <Link href="/contact" className="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900">Contacto</Link>
+                <Link href="/cart" className="text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900">Carrito</Link>
             </nav>
         </header>
     );
