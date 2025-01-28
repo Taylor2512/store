@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Search from "@components/inputs/Search";
+import Image from "next/image";
 
 export default function Header() {
     return (
         <header className="flex items-center justify-between p-4 bg-white shadow-md">
             <div className="flex items-center">
                 <Link href="/">
-                    <img src="/logo.svg" alt="E-Commerce Logo" className="h-8 w-auto" />
+                    <Image src="/logo.svg" alt="E-Commerce Logo" width={32} height={32} />
                 </Link>
             </div>
             <Search />

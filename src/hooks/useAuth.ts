@@ -1,9 +1,16 @@
 import { useState } from "react";
 
-export function useAuth() {
-    const [user, setUser] = useState(null);
+interface User {
+    id: string;
+    name: string;
+    email: string;
+    // Agrega más campos según sea necesario
+}
 
-    const login = (userData: any) => setUser(userData);
+export function useAuth() {
+    const [user, setUser] = useState<User | null>(null);
+
+    const login = (userData: User) => setUser(userData);
     const logout = () => setUser(null);
 
     return { user, login, logout };

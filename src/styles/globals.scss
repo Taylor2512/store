@@ -20,12 +20,12 @@
 @use "cmdk/vercel.scss";
 
 // ✅ Ahora sí, importa Tailwind después de los @use
-@import "tailwindcss/base";
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
 
-@import "tailwindcss/components";
 @import "custom-classes.css";
 
-@import "tailwindcss/utilities";
 // Definiciones globales
 @font-face {
   font-family: 'Inter';
